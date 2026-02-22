@@ -103,7 +103,7 @@ const Hero: React.FC<HeroProps> = ({onOpenEnquiry}) => {
         <img src={gate} alt="Entrance Gate" className="w-full image-crisp h-full object-cover" fetchPriority="high" decoding="async" />
       </div>
 
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/10 via-black/10 to-slate-900/10 pointer-events-none"></div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/20 via-black/20 to-slate-900/20 pointer-events-none"></div>
 
       {/* The Animating Logo */}
       <img 
