@@ -113,6 +113,7 @@ const Hero: React.FC<HeroProps> = ({onOpenEnquiry}) => {
         alt="Aarambh Logo" 
         className="fixed top-0 left-0 z-[102] object-contain origin-top-left pointer-events-none transition-opacity duration-300 p-2 s"
         style={{ visibility: 'hidden', willChange: 'transform, width, height' }}
+        fetchPriority="high"
       />
 
       <div className="absolute top-24 left-1/2 -translate-x-1/2 z-30">

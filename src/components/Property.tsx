@@ -51,6 +51,7 @@ const Property = ({onOpenEnquiry}: {onOpenEnquiry: () => void}) => {
               allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
+              loading="lazy"
             ></iframe>
             
             <div className="space-y-8 mt-8 px-2 mb-5 sm:px-50">
