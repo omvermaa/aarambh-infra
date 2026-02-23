@@ -150,8 +150,10 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, onClose }) => {
                     name="interest" 
                     className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all appearance-none text-slate-700"
                   >
-                    <option value="3 BHK Villa (1887 sqft)">3 BHK Villa (1887 sqft)</option>
-                    <option value="4 BHK Villa (2727 sqft)">4 BHK Villa (2727 sqft)</option>
+                    <option value="4 BHK Villa (2727 sqft)">5 BHK Villa (1887 sqft)</option>
+                    <option value="5 BHK Villa (1989 sqft)">5 BHK Villa (1989 sqft)</option>
+                    <option value="5 BHK Villa (2035 sqft)">5 BHK Villa (2035 sqft)</option>
+                    <option value="6 BHK Villa (2727 sqft)">6 BHK Villa (2727 sqft)</option>
                     <option value="Just exploring">Just exploring</option>
                   </select>
                 </div>

@@ -27,6 +27,16 @@ function App() {
 
   return (
     <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+        
+        body {
+          font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3 {
+          font-family: 'Playfair Display', serif;
+        }
+      `}</style>
       <Navbar />
       <Hero onOpenEnquiry={() => setIsEnquiryOpen(true)} />
 

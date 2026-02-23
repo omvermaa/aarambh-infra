@@ -146,7 +146,7 @@ const Property = ({onOpenEnquiry}: {onOpenEnquiry: () => void}) => {
       </section>
 
       {/* ==========================================
-          3. SPECIFICATIONS SECTION (Redesigned)
+          3. SPECIFICATIONS SECTION
       ========================================== */}
       <section
         id="specifications"
@@ -183,39 +183,39 @@ const Property = ({onOpenEnquiry}: {onOpenEnquiry: () => void}) => {
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-3">Living / Dining Room</h4>
                 <ul className="space-y-2">
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2 gap-1 sm:gap-0">
                     <span className="text-slate-500">Flooring</span>
-                    <span className="text-slate-900 font-medium text-right">Vitrified Tiles (600x600)</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">Vitrified Tiles (600x600)</span>
                   </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2 gap-1 sm:gap-0">
                     <span className="text-slate-500">Walls</span>
-                    <span className="text-slate-900 font-medium text-right">O.B.D Paints</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">O.B.D Paints</span>
                   </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm gap-1 sm:gap-0">
                     <span className="text-slate-500">Ceiling</span>
-                    <span className="text-slate-900 font-medium text-right">Designer POP</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">Designer POP</span>
                   </li>
                 </ul>
               </div></FadeIn>
 
               {/* Card 2: Bedroom */}
-              <FadeIn delay={200} className="h-full"><div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md active:shadow-md transition-all group h-full">
-                <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center text-amber-600 mb-6 group-hover:bg-amber-500 group-hover:text-white group-active:bg-amber-500 group-active:text-white transition-colors">
-                  <Bed size={24} />
+              <FadeIn delay={200} className="h-full"><div className="bg-white p-5 rounded-xl shadow-sm border border-slate-100 hover:shadow-md active:shadow-md transition-all group h-full">
+                <div className="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center text-amber-600 mb-4 group-hover:bg-amber-500 group-hover:text-white group-active:bg-amber-500 group-active:text-white transition-colors">
+                  <Bed size={20} />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-4">Bedroom</h4>
-                <ul className="space-y-3">
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2">
+                <h4 className="text-lg font-bold text-slate-900 mb-3">Bedroom</h4>
+                <ul className="space-y-2">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2 gap-1 sm:gap-0">
                     <span className="text-slate-500">Flooring</span>
-                    <span className="text-slate-900 font-medium text-right">Vitrified Tiles (600x600)</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">Vitrified Tiles (600x600)</span>
                   </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2 gap-1 sm:gap-0">
                     <span className="text-slate-500">Walls</span>
-                    <span className="text-slate-900 font-medium text-right">O.B.D Paints</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">O.B.D Paints</span>
                   </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm gap-1 sm:gap-0">
                     <span className="text-slate-500">Ceiling</span>
-                    <span className="text-slate-900 font-medium text-right">Designer POP</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">Designer POP</span>
                   </li>
                 </ul>
               </div></FadeIn>
@@ -227,17 +227,17 @@ const Property = ({onOpenEnquiry}: {onOpenEnquiry: () => void}) => {
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-3">Master Bedroom</h4>
                 <ul className="space-y-2">
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2 gap-1 sm:gap-0">
                     <span className="text-slate-500">Flooring</span>
-                    <span className="text-slate-900 font-medium text-right">Vitrified Tiles (600x600)</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">Vitrified Tiles (600x600)</span>
                   </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2 gap-1 sm:gap-0">
                     <span className="text-slate-500">Walls</span>
-                    <span className="text-slate-900 font-medium text-right">O.B.D Paints</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">O.B.D Paints</span>
                   </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm gap-1 sm:gap-0">
                     <span className="text-slate-500">Ceiling</span>
-                    <span className="text-slate-900 font-medium text-right">Designer POP</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">Designer POP</span>
                   </li>
                 </ul>
               </div></FadeIn>
@@ -249,13 +249,13 @@ const Property = ({onOpenEnquiry}: {onOpenEnquiry: () => void}) => {
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-3">Kitchen</h4>
                 <ul className="space-y-2">
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm border-b border-slate-50 pb-2 gap-1 sm:gap-0">
                     <span className="text-slate-500">Flooring</span>
-                    <span className="text-slate-900 font-medium text-right">Vitrified Tiles (600x600)</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">Vitrified Tiles (600x600)</span>
                   </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm">
+                  <li className="flex flex-col sm:flex-row sm:justify-between text-sm gap-1 sm:gap-0">
                     <span className="text-slate-500">Walls</span>
-                    <span className="text-slate-900 font-medium text-right">O.B.D Paints, Tiles above counter</span>
+                    <span className="text-slate-900 font-medium text-left sm:text-right">O.B.D Paints, Tiles above counter</span>
                   </li>
                 </ul>
               </div></FadeIn>
@@ -338,7 +338,7 @@ const Property = ({onOpenEnquiry}: {onOpenEnquiry: () => void}) => {
       </section>
 
       {/* ==========================================
-          3. FLOOR PLAN & MASTER PLAN (GATED CONTENT)
+          4. FLOOR PLAN & MASTER PLAN (GATED CONTENT)
       ========================================== */}
       <section
         id="floor-plans"
@@ -347,7 +347,7 @@ const Property = ({onOpenEnquiry}: {onOpenEnquiry: () => void}) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn direction="up">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 font-serif">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">
               Sukoon Villas Floor Plan & Master Plan
             </h2>
             <p className="text-lg md:text-xl text-gray-600 font-light">
@@ -447,7 +447,7 @@ const Property = ({onOpenEnquiry}: {onOpenEnquiry: () => void}) => {
       </section>
 
       {/* ==========================================
-          4. LOCATION SECTION
+          5. LOCATION SECTION
       ========================================== */}
       <section
         id="location"
