@@ -27,7 +27,11 @@ const Navbar = () => {
       const targetId = href.replace('#', '');
       const element = document.getElementById(targetId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const offset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
     }
     setIsOpen(false);
@@ -46,10 +50,10 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 w-full ${isOpen ? 'z-[105] h-full' : 'z-[100]'} transition-all duration-300 ease-in-out ${
         isOpen 
-          ? `bg-slate-900 ${isScrolled ? 'py-3' : 'py-3'}`
+          ? `bg-slate-900 ${isScrolled ? 'py-2' : 'py-2'}`
           : isScrolled 
-            ? 'bg-slate-900/95 backdrop-blur-md shadow-lg py-3' 
-            : 'bg-transparent py-3'
+            ? 'bg-slate-900/95 backdrop-blur-md shadow-lg py-2' 
+            : 'bg-transparent py-2'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,31 +83,34 @@ const Navbar = () => {
                   <a 
                     href={link.href}
                     onClick={(e) => handleScroll(e, link.href)}
-                    className="text-sm font-medium text-gray-200 hover:text-amber-400 transition-colors duration-200"
+                    className="text-lg font-medium text-gray-200 hover:text-amber-400 active:text-amber-400 transition-colors duration-200"
                   >
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
-
-            <a 
-              href="tel:+919910815516" 
-              className="hidden lg:flex items-center gap-2 bg-amber-400 text-slate-900 px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-amber-500 hover:shadow-lg hover:shadow-amber-400/20 transition-all duration-300"
-            >
-              <Phone size={16} />
-              Call Now
-            </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden flex items-center">
-            <button 
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-200 hover:text-white focus:outline-none"
+          <div className="flex items-center gap-4">
+            <a 
+              href="tel:+919910815516" 
+              className="hidden text-slate-900 btn download-brochure cursor-pointer sm:flex items-center justify-start gap-2 px-4 py-2 sm:px-6 sm:py-2.5 text-sm font-semibold bg-amber-400 border border-white/50 backdrop-blur-md rounded-lg hover:shadow-amber-400/20 hover:bg-amber-500 hover:shadow-lg active:bg-amber-500 active:shadow-lg transition-all duration-300 animate-glow-white shadow-lg "
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+              <Phone size={16} />
+              <span className="hidden sm:inline">Call Now</span>
+              <span className="sm:hidden">Call Now</span>
+            </a>
+
+            {/* Mobile Menu Toggle */}
+            <div className="md:hidden flex items-center">
+              <button 
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-200 hover:text-white focus:outline-none"
+              >
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -119,7 +126,7 @@ const Navbar = () => {
             <li key={link.name}>
               <a 
                 href={link.href}
-                className="block px-3 py-3 text-base font-medium text-gray-300 hover:text-amber-400 hover:bg-slate-800 rounded-md transition-colors"
+                className="block px-3 py-3 text-base font-medium text-gray-300 hover:text-amber-400 hover:bg-slate-800 active:text-amber-400 active:bg-slate-800 rounded-md transition-colors"
                 onClick={(e) => handleScroll(e, link.href)}
               >
                 {link.name}
@@ -128,12 +135,12 @@ const Navbar = () => {
           ))}
           <li>
             <a 
-              href="tel:+919910815516"
-              className="flex items-center gap-2 px-3 py-3  text-base font-medium text-slate-900 bg-amber-400 hover:bg-amber-500 rounded-lg transition-colors mt-2"
-              onClick={() => setIsOpen(false)}
+              href="tel:+919910815516" 
+              className="text-slate-900 btn download-brochure cursor-pointer flex items-center justify-start gap-2 px-4 py-2 sm:px-6 sm:py-2.5 text-sm font-semibold bg-amber-400 border border-white/50 backdrop-blur-md rounded-lg hover:shadow-amber-400/20 hover:bg-amber-500 hover:shadow-lg active:bg-amber-500 active:shadow-lg transition-all duration-300 animate-glow-white shadow-lg"
             >
-              <Phone size={18} />
-              Call Now
+              <Phone size={16} />
+              <span className="hidden sm:inline">Call Now</span>
+              <span className="sm:hidden">Call Now</span>
             </a>
           </li>
         </ul>

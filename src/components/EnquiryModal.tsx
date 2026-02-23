@@ -43,7 +43,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <RemoveScroll>
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+    <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 sm:p-6">
       
       {/* Darkened Background Backdrop (Clicking it closes the modal) */}
       <div 
@@ -57,7 +57,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, onClose }) => {
         {/* Fixed Close 'X' Button - Now pinned outside the scroll area */}
         <button 
           onClick={onClose}
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-50 p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors shadow-sm"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-50 p-2 bg-slate-100 hover:bg-slate-200 active:bg-slate-200 rounded-full transition-colors shadow-sm"
         >
           <X size={20} className="text-slate-900" />
         </button>
@@ -159,7 +159,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, onClose }) => {
 
               <button 
                 type="submit" 
-                className="w-full flex items-center justify-center gap-2 bg-amber-400 text-slate-900 font-bold py-4 rounded-lg hover:bg-amber-500 transition-colors duration-300 shadow-lg shadow-amber-400/20 mt-4"
+                className="w-full flex items-center justify-center gap-2 bg-amber-400 text-slate-900 font-bold py-4 rounded-lg hover:bg-amber-500 active:bg-amber-500 transition-colors duration-300 shadow-lg shadow-amber-400/20 mt-4"
               >
                 <Send size={20} />
                 Submit Enquiry

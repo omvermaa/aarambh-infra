@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -120,5 +121,32 @@
     }
   body {
     @apply bg-background text-foreground;
+    font-family: "Playfair Display", serif;
     }
+}
+
+@keyframes pulse-glow-amber {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 0px rgba(251, 191, 36, 0.7);
+  }
+}
+
+@keyframes pulse-glow-white {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.animate-glow-amber {
+  animation: pulse-glow-amber 2s infinite;
+}
+
+.animate-glow-white {
+  animation: pulse-glow-white 2s infinite;
 }

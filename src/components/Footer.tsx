@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import FadeIn from "./FadeIn";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-slate-800 pb-12">
           
           {/* Column 1: Brand */}
-          <div className="lg:col-span-1">
+          <FadeIn delay={0} className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               
               <div>
@@ -30,32 +31,32 @@ const Footer = () => {
             </p>
             {/* Social Icons */}
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 active:bg-amber-500 active:text-slate-900 transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 active:bg-amber-500 active:text-slate-900 transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 active:bg-amber-500 active:text-slate-900 transition-colors">
                 <Twitter size={18} />
               </a>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Column 2: Quick Links */}
-          <div>
+          <FadeIn delay={100}>
             <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-sm hover:text-amber-400 transition-colors">Home</a></li>
-              <li><a href="#about" className="text-sm hover:text-amber-400 transition-colors">About Project</a></li>
-              <li><a href="#amenities" className="text-sm hover:text-amber-400 transition-colors">Amenities & Specs</a></li>
-              <li><a href="#floor-plans" className="text-sm hover:text-amber-400 transition-colors">Floor Plans</a></li>
-              <li><a href="#location" className="text-sm hover:text-amber-400 transition-colors">Location Map</a></li>
+              <li><a href="#" className="text-sm hover:text-amber-400 active:text-amber-400 transition-colors">Home</a></li>
+              <li><a href="#about" className="text-sm hover:text-amber-400 active:text-amber-400 transition-colors">About Project</a></li>
+              <li><a href="#amenities" className="text-sm hover:text-amber-400 active:text-amber-400 transition-colors">Amenities & Specs</a></li>
+              <li><a href="#floor-plans" className="text-sm hover:text-amber-400 active:text-amber-400 transition-colors">Floor Plans</a></li>
+              <li><a href="#location" className="text-sm hover:text-amber-400 active:text-amber-400 transition-colors">Location Map</a></li>
             </ul>
-          </div>
+          </FadeIn>
 
           {/* Column 3: Contact Details */}
-          <div className="lg:col-span-2">
+          <FadeIn delay={200} className="lg:col-span-2">
             <h3 className="text-white font-bold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -67,14 +68,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-amber-400 shrink-0" size={20} />
-                <span className="text-sm hover:text-white cursor-pointer transition-colors">+91 00000 00000</span>
+                <span className="text-sm hover:text-white active:text-white cursor-pointer transition-colors">+91 9910815516</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-amber-400 shrink-0" size={20} />
-                <span className="text-sm hover:text-white cursor-pointer transition-colors">info@aarambhinfra.com</span>
+                <span className="text-sm hover:text-white active:text-white cursor-pointer transition-colors">info@aarambhinfra.com</span>
               </li>
             </ul>
-          </div>
+          </FadeIn>
 
         </div>
 

@@ -1,4 +1,5 @@
 import * as React from "react"
+import { createPortal } from "react-dom"
 import {
   Carousel,
   CarouselContent,
@@ -69,9 +70,13 @@ export function CarouselDemo() {
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap())
     })
-  }, [api])
 
-  return (
+    if (isFullScreen) {
+      api.plugins().autoplay.stop()
+    }
+  }, [api, isFullScreen])
+
+  const carouselContent = (
     <Carousel
       setApi={setApi}
       plugins={[Autoplay({ delay: 2000 })]}
@@ -131,6 +136,12 @@ export function CarouselDemo() {
       )}
     </Carousel>
   )
+
+  if (isFullScreen) {
+    return createPortal(carouselContent, document.body)
+  }
+
+  return carouselContent
 }
 
 export default CarouselDemo;

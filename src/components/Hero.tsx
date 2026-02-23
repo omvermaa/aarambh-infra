@@ -3,6 +3,7 @@ import { MapPin, ArrowRight, Download } from 'lucide-react';
 import logo from "@/assets/logo.png";
 import gate from "@/assets/gate.png";
 import brochure from "@/assets/brochure.pdf";
+import FadeIn from "./FadeIn";
 
 
 interface HeroProps {
@@ -96,34 +97,36 @@ const Hero: React.FC<HeroProps> = ({onOpenEnquiry}) => {
   }, []);
 
   return (
-    <section className="relative w-full h-[90vh] min-h-[650px] flex justify-between items-center overflow-hidden pb-12 sm:pt-0">
+    <section className="relative w-full h-[95vh] sm:h-[80vh] min-h-[650px] flex justify-between items-center overflow-hidden pb-12 sm:pt-0">
       
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={gate} alt="Entrance Gate" className="w-full image-crisp h-full object-cover" fetchPriority="high" decoding="async" />
       </div>
 
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/20 via-black/20 to-slate-900/20 pointer-events-none"></div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/10 via-black/10 to-slate-900/10 pointer-events-none"></div>
 
       {/* The Animating Logo */}
       <img 
         ref={fixedLogoRef}
         src={logo} 
         alt="Aarambh Logo" 
-        className="fixed top-0 left-0 z-[102] object-contain origin-top-left pointer-events-none transition-opacity duration-300"
+        className="fixed top-0 left-0 z-[102] object-contain origin-top-left pointer-events-none transition-opacity duration-300 p-2 s"
         style={{ visibility: 'hidden', willChange: 'transform, width, height' }}
       />
 
-      <div className="absolute top-24 left-1/2 -translate-x-1/2 z-30 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white text-xs sm:text-sm font-medium uppercase tracking-wider pointer-events-auto">
-        <MapPin size={16} className="text-amber-400 shrink-0" />
-        <a href="https://www.google.com/maps/dir/?api=1&destination=28.5859575,77.4898251" target="_blank" rel="noopener noreferrer" className="truncate hover:text-amber-400 transition-colors">Sukoon Villas, Greater Noida West</a>
+      <div className="absolute top-24 left-1/2 -translate-x-1/2 z-30">
+        <FadeIn direction="down" forceRender={true} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white text-xs sm:text-sm font-medium uppercase tracking-wider pointer-events-auto">
+          <MapPin size={16} className="text-amber-400 shrink-0" />
+          <a href="https://www.google.com/maps/dir/?api=1&destination=28.5859575,77.4898251" target="_blank" rel="noopener noreferrer" className="truncate hover:text-amber-400 transition-colors">Sukoon Villas, Greater Noida West</a>
+        </FadeIn>
       </div>
 
       {/* Main Content */}
       <div className="relative z-20 w-full gap-10 max-w-7xl mx-auto px-4 md:mt-10 sm:px-6 lg:px-8 lg:mt-10 flex flex-col items-center justify-center text-center h-full pointer-events-none">
 
         {/* Hero Slot Placeholder */}
-        <div className="h-[120px] sm:h-[180px] mb-40 px-4 py-3 flex items-center justify-center">
+        <div className="h-[160px] sm:h-[180px] mb-40 px-4 py-3 flex items-center justify-center">
           <img 
             ref={heroSlotRef}
             src={logo} 
@@ -133,17 +136,20 @@ const Hero: React.FC<HeroProps> = ({onOpenEnquiry}) => {
         </div>
 
         {/* Buttons */}
-        <div className="flex px-5 absolute bottom-0 flex-col sm:mt-20 sm:flex-row gap-4 w-full sm:w-auto pointer-events-auto">
-          <button onClick={onOpenEnquiry} className="cursor-pointer flex items-center justify-center gap-2 px-6 py-4 w- sm:px-8 text-base font-semibold text-slate-900 bg-amber-400 rounded-lg hover:bg-amber-500 transition-colors duration-300 shadow-lg shadow-amber-400/20 w-full sm:w-auto">
+        <div className="absolute bottom-10 sm:bottom-4 w-full flex justify-center px-4 z-30 pointer-events-none">
+          <FadeIn direction="up" delay={500} forceRender={true} className="project-btn flex flex-col sm:flex-row gap-3 w-full sm:w-auto max-w-2xl mx-auto pointer-events-auto">
             
-            Schedule a Visit
-            <ArrowRight size={20} />
-          </button>
-          
-          <button onClick={handleDownload} className="cursor-pointer flex items-center justify-center gap-2 px-6 py-4 sm:px-8 text-base font-semibold text-white bg-white/10 border border-white/30 backdrop-blur-md rounded-lg hover:bg-white/20 transition-all duration-300 w-full sm:w-auto">
-            <Download size={20} />
-            Download Brochure
-          </button>
+            <button onClick={handleDownload} className="btn  download-brochure cursor-pointer flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-3 sm:px-8 text-sm sm:text-base font-semibold text-white bg-slate-900/90 border border-white/50 backdrop-blur-md rounded-lg hover:bg-black active:bg-black transition-all duration-300 w-full sm:w-auto animate-glow-white shadow-lg">
+              <Download size={18} />
+              Download Brochure
+            </button>
+            
+            <button onClick={onOpenEnquiry} className="btn contact-sales-manager cursor-pointer flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-3 sm:px-8 text-sm sm:text-base border border-white/50 backdrop-blur-mdfont-semibold text-slate-900 bg-amber-400 rounded-lg hover:bg-amber-500 active:bg-amber-500 transition-colors duration-300 shadow-lg shadow-amber-400/20 w-full sm:w-auto animate-glow-amber">
+              Book your Visit
+              <ArrowRight size={18} />
+            </button>
+            
+          </FadeIn>
         </div>
       </div>
     </section>
