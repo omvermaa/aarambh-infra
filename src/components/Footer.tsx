@@ -72,7 +72,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-amber-400 shrink-0" size={20} />
-                <span className="text-sm hover:text-white active:text-white cursor-pointer transition-colors">info@aarambhinfra.com</span>
+                <span className="text-sm hover:text-white active:text-white cursor-pointer transition-colors">aarambhinfrastructure1@gmail.com</span>
               </li>
             </ul>
           </FadeIn>
@@ -84,7 +84,7 @@ const Footer = () => {
           
           <div className="space-y-1 text-center md:text-left">
             <p>
-              Developed by: <span className="text-gray-300 font-semibold">Aarambh Infrastructure, Bhoodhan Developers</span> 
+              Developed by: <span className="text-gray-300 font-semibold">Aarambh Infrastructure</span> 
             </p>
           </div>
 
