@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
-              Experience elevated living where modern architecture meets timeless elegance. Premium 3 & 4 BHK modern villas crafted for every generation.
+              Experience elevated living where modern architecture meets timeless elegance. Premium 5 & 6 BHK modern villas crafted for every generation.
             </p>
             {/* Social Icons */}
             <div className="flex gap-4">

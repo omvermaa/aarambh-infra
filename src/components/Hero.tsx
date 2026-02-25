@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { MapPin, ArrowRight, Download } from 'lucide-react';
 import logo from "@/assets/logo.png";
 import gate from "@/assets/gate.png";
-import brochure from "@/assets/brochure.pdf";
+// import brochure from "@/assets/brochure.pdf";
+import villa from "@/assets/villa.pdf";
 import FadeIn from "./FadeIn";
 
 
@@ -20,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({onOpenEnquiry}) => {
   const handleDownload = async () => {
     try {
       // Fetch the file from a URL or API endpoint
-      const response = await fetch(brochure);
+      const response = await fetch(villa);
       const blob = await response.blob(); // Get the response as a Blob
 
       // Create a URL for the blob
@@ -29,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({onOpenEnquiry}) => {
       // Create a temporary anchor tag to trigger the download
       const link = document.createElement('a');
       link.href = fileUrl;
-      link.setAttribute('download', 'Sukoon-Villas-Brochure.pdf'); // Specify the file name
+      link.setAttribute('download', 'villa.pdf'); // Specify the file name
       document.body.appendChild(link);
       link.click(); // Simulate a click to start the download
 
