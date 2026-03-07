@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({onOpenEnquiry}) => {
       // Create a temporary anchor tag to trigger the download
       const link = document.createElement('a');
       link.href = fileUrl;
-      link.setAttribute('download', 'villa.pdf'); // Specify the file name
+      link.setAttribute('download', 'villaNew.pdf'); // Specify the file name
       document.body.appendChild(link);
       link.click(); // Simulate a click to start the download
 

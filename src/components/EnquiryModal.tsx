@@ -77,11 +77,11 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, onClose }) => {
             <div className="hidden sm:block sm:space-y-4 sm:relative sm:z-10">
               <div className="flex items-center gap-3">
                 <div className="bg-white/10 p-2 rounded-full"><Phone size={16} className="text-amber-400"/></div>
-                <span className="text-sm font-medium">+919910815516</span>
+                <span className="text-sm font-medium">+91 9910815516</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="bg-white/10 p-2 rounded-full"><Mail size={16} className="text-amber-400"/></div>
-                <span className="text-sm font-medium">sales@aarambhinfra.com</span>
+                <span className="text-sm font-medium">aarambhinfrastructure1@gmail.com</span>
               </div>
             </div>
           </div>
@@ -150,9 +150,9 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, onClose }) => {
                     name="interest" 
                     className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 transition-all appearance-none text-slate-700"
                   >
-                    <option value="4 BHK Villa (2727 sqft)">5 BHK Villa (1887 sqft)</option>
-                    <option value="5 BHK Villa (1989 sqft)">5 BHK Villa (1989 sqft)</option>
-                    <option value="5 BHK Villa (2035 sqft)">5 BHK Villa (2035 sqft)</option>
+                    <option value="4 BHK Villa (2727 sqft)">4 BHK Villa (1887 sqft)</option>
+                    <option value="4 BHK Villa (1989 sqft)">4 BHK Villa (1989 sqft)</option>
+                    <option value="4 BHK Villa (2035 sqft)">4 BHK Villa (2035 sqft)</option>
                     <option value="6 BHK Villa (2727 sqft)">6 BHK Villa (2727 sqft)</option>
                     <option value="Just exploring">Just exploring</option>
                   </select>
